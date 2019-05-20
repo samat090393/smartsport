@@ -10,7 +10,7 @@ public class VisitorCountDAO {
     @Value("${redis-host}")
     private String redisHost;
 
-    private static final String KEY_NAME = "numberOfVisitors";
+    private static final String KEY_NAME = "apple";
     private static final String INITIAL_VALUE = "0";
 
     public String getVisitCount() {
