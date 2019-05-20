@@ -19,4 +19,8 @@ public class VisitorCountService {
 
         return "You are the " + updatedValue + " visitor of our service";
     }
+
+    public int add(int a, int b) {
+        return a + b;
+    }
 }

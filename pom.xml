@@ -19,6 +19,7 @@
         <java.version>1.8</java.version>
         <redis.version>3.0.1</redis.version>
         <log4j.version>1.2.17</log4j.version>
+        <mockito.version>2.27.0</mockito.version>
     </properties>
 
     <dependencies>
@@ -43,6 +44,13 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
