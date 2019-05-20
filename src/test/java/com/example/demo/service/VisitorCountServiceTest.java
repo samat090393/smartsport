@@ -19,7 +19,7 @@ public class VisitorCountServiceTest {
         int b = 5;
 
         // EXPECTED
-        int expected = 10;
+        int expected = 9;
 
         // RESULT
         Assert.assertEquals(expected, underTest.add(a, b));
