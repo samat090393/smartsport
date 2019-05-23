@@ -1,28 +1,20 @@
 pipeline {
     agent any
+    tools {
+        maven 'Maven 3.3.9'
+        jdk 'jdk8'
+    }
 
     stages {
-        stage ('Compile Stage') {
+        stage ('First Stage') {
             steps {
-                withMaven(maven : 'maven_3.6.1') {
-                    sh 'mvn clean compile'
-                }
+                echo 'echo First Stage'
             }
         }
 
         stage ('Test Stage') {
             steps {
-                withMaven(maven : 'maven_3.6.1') {
-                    sh 'mvn clean test'
-                }
-            }
-        }
-
-        stage ('Package Stage') {
-            steps {
-                withMaven(maven : 'maven_3.6.1') {
-                    sh 'mvn clean package'
-                }
+                sh 'mvn clean test'
             }
         }
     }
