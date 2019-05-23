@@ -31,7 +31,7 @@ public class VisitorCountDAO {
         client.close();
     }
 
-    public Jedis getRedisClient() {
+    private Jedis getRedisClient() {
         Jedis client = new Jedis(redisHost);
         return client;
     }
