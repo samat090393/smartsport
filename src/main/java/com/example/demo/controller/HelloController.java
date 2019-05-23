@@ -19,4 +19,10 @@ public class HelloController {
 
         return visitCount;
     }
+
+    @RequestMapping(value = "/welcome")
+    @ResponseBody
+    public String getWelcome() {
+        return "Welcome to AWS";
+    }
 }
