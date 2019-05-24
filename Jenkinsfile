@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage ('First Stage') {
             steps {
-                echo 'echo First Stage'
+                echo 'First Stage'
             }
         }
 
         stage ('Test Stage') {
             steps {
-                bash 'mvn clean test'
+                sh 'mvn clean test'
             }
         }
     }
