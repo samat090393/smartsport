@@ -20,7 +20,7 @@ pipeline {
 
         stage ('Build docker image') {
             steps {
-                sh 'docker build -t smartsport -f Dockerfile.dev'
+                sh 'docker build -t smartsport -f Dockerfile.dev .'
             }
         }
     }
