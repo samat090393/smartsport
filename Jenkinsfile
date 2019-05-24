@@ -18,6 +18,12 @@ pipeline {
             }
         }
 
+        stage ('Display Docker Images') {
+                    steps {
+                        sh 'sudo docker images'
+                    }
+                }
+
         stage ('Build docker image') {
             steps {
                 sh 'docker build -t smartsport/latest -f Dockerfile.dev .'
