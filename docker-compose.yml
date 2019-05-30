@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile.dev
     container_name: demo
     ports:
-      - "8081:8080"
+      - "8091:8080"
   redis:
     image: redis
     container_name: redis

@@ -23,6 +23,6 @@ public class HelloController {
     @RequestMapping(value = "/welcome")
     @ResponseBody
     public String getWelcome() {
-        return "Welcome to AWS";
+        return "Welcome to AWS Samat";
     }
 }
