@@ -21,7 +21,7 @@ pipeline {
         stage ('Display Docker Images') {
             steps {
                 script {
-                    docker.build registry + ":$BUILD_NUMBER"
+                    docker.build -f Dockerfile.dev registry + ":$BUILD_NUMBER"
                 }
             }
         }
