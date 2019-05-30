@@ -12,6 +12,7 @@ public class HelloController {
     @Autowired
     private VisitorCountService visitorCountService;
 
+
     @RequestMapping(value = "/visitor")
     @ResponseBody
     public String getHello() {
