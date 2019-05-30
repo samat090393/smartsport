@@ -6,7 +6,7 @@ before_install:
   - mvn clean package
 
 script:
-  - docker build -t samatlabibulla/smartsport .
+  - docker build -t samatlabibulla/smartsport -f Dockerfile.dev .
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
