@@ -4,12 +4,10 @@ services:
 
 before_install:
   - mvn clean package
-  - docker build -t samatlabibulla/smartsport -f Dockerfile.dev .
 
 script:
-  - docker run samatlabibulla/smartsport
+  - docker build -t samatlabibulla/smartsport .
 
 after_success:
-  - docker build -t samatlabibulla/smartsport .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push samatlabibulla/smartsport
