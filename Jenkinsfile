@@ -1,4 +1,10 @@
 pipeline {
+
+    environment {
+        registry = "samatlabibulla/smartsport"
+        registryCredentials = "dockerhub-creds"
+    }
+
     agent any
     tools {
         maven 'maven3.6.1'
@@ -6,12 +12,6 @@ pipeline {
     }
 
     stages {
-        stage ('First Stage') {
-            steps {
-                echo 'First Stage'
-            }
-        }
-
         stage ('Test Stage') {
             steps {
                 sh 'mvn clean test'
@@ -19,14 +19,10 @@ pipeline {
         }
 
         stage ('Display Docker Images') {
-                    steps {
-                        sh 'sudo docker images'
-                    }
-                }
-
-        stage ('Build docker image') {
             steps {
-                sh 'docker build -t smartsport/latest -f Dockerfile.dev .'
+                script {
+                    docker.build registry + ":$BUILD_NUMBER"
+                }
             }
         }
     }
