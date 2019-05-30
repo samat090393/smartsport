@@ -19,11 +19,11 @@ pipeline {
         }
 
         stage ('Display Docker Images') {
-            steps {
-                script {
-                    sudo docker.build registry + ":$BUILD_NUMBER"
-                }
-            }
+            app = docker.build("samatlabibulla/smartsport");
+        }
+
+        stage ('Push Image') {
+
         }
     }
 }
