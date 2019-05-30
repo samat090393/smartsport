@@ -19,11 +19,9 @@ pipeline {
         }
 
         stage ('Display Docker Images') {
-            app = docker.build("samatlabibulla/smartsport");
-        }
-
-        stage ('Push Image') {
-
+            steps {
+                app = docker.build("samatlabibulla/smartsport");
+            }
         }
     }
 }
