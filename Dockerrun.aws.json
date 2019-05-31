@@ -6,10 +6,11 @@
       "image": "samatlabibulla/smartsport:latest",
       "hostname": "smartsport",
       "essential": true,
+      "memory": 128,
       "portMappings": [
         {
           "hostPort": 8080,
-          "containerPort": 8080
+          "containerPort": 8091
         }
       ],
       "links": [
@@ -21,6 +22,7 @@
       "image": "redis:latest",
       "hostname": "redis",
       "essential": false,
+      "memory": 128,
       "portMappings": [
         {
           "hostPort": 6379,
