@@ -7,10 +7,10 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class VisitorCountServiceTest {
+public class VisitorServiceTest {
 
     @InjectMocks
-    private VisitorCountService underTest;
+    private VisitorService underTest;
 
     @Test
     public void test_addShouldReturnValidNumber() {

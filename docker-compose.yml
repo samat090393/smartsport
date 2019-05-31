@@ -6,9 +6,21 @@ services:
       dockerfile: Dockerfile.dev
     container_name: demo
     ports:
-      - "8091:8080"
+      - "8091:8091"
+    depends_on:
+      - postgres
+      - redis
   redis:
     image: redis
     container_name: redis
     ports:
       - "6379:6379"
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER:'postgres'
+      - POSTGRES_PASSWORD:'postgres'
+      - POSTGRES_DB:'test'
