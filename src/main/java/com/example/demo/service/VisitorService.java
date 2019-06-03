@@ -14,22 +14,21 @@ public class VisitorService {
     @Autowired
     private VisitorCountDAO visitorCountDAO;
 
-    //    @Autowired
+    @Autowired
     private VisitorDAO visitorDAO;
 
     public Visitor addVisitor(Visitor visitor) {
-//        Visitor result = visitorDAO.save(visitor);
-//
-//        if (result != null) {
-//            String numberOfVisitors = visitorCountDAO.getVisitCount();
-//            int currentValue = Integer.parseInt(numberOfVisitors);
-//            int updatedValue = ++currentValue;
-//            String newValue = String.valueOf(updatedValue);
-//            visitorCountDAO.setVisitCount(newValue);
-//        }
+        Visitor result = visitorDAO.save(visitor);
 
-//        return result;
-        return null;
+        if (result != null) {
+            String numberOfVisitors = visitorCountDAO.getVisitCount();
+            int currentValue = Integer.parseInt(numberOfVisitors);
+            int updatedValue = ++currentValue;
+            String newValue = String.valueOf(updatedValue);
+            visitorCountDAO.setVisitCount(newValue);
+        }
+
+        return result;
     }
 
     public String getNumberOfVisitors() {
@@ -37,8 +36,7 @@ public class VisitorService {
     }
 
     public List<Visitor> getVisitors() {
-//        return (List<Visitor>) visitorDAO.findAll();
-        return null;
+        return (List<Visitor>) visitorDAO.findAll();
     }
 
     public int add(int a, int b) {
