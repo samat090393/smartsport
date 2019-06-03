@@ -17,7 +17,7 @@ deploy:
   provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
-  env: MultiDocker-env
+  env: smartsport1
   bucket_name: elasticbeanstalk-us-east-2-919796150918
   bucket_path: docker-multi
   on:
