@@ -32,6 +32,6 @@ public class VisitorController {
     @RequestMapping(value = "/welcome")
     @ResponseBody
     public String getWelcome() {
-        return "Welcome to AWS Samat";
+        return "Welcome to AWS Samat!";
     }
 }

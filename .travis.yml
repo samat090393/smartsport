@@ -9,7 +9,6 @@ script:
   - docker build -t samatlabibulla/smartsport:v1 -f Dockerfile.dev .
 
 after_success:
-  - docker images
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push samatlabibulla/smartsport
 
