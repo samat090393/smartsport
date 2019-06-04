@@ -14,11 +14,12 @@ public class VisitorService {
     @Autowired
     private VisitorCountDAO visitorCountDAO;
 
-    @Autowired
+    // @Autowired
     private VisitorDAO visitorDAO;
 
     public Visitor addVisitor(Visitor visitor) {
-        Visitor result = visitorDAO.save(visitor);
+        // Visitor result = visitorDAO.save(visitor);
+        Visitor result = null;
 
         if (result != null) {
             String numberOfVisitors = visitorCountDAO.getVisitCount();
@@ -36,7 +37,8 @@ public class VisitorService {
     }
 
     public List<Visitor> getVisitors() {
-        return (List<Visitor>) visitorDAO.findAll();
+        // return (List<Visitor>) visitorDAO.findAll();
+        return null;
     }
 
     public int add(int a, int b) {

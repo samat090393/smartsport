@@ -13,15 +13,15 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push samatlabibulla/smartsport
 
-deploy:
-  provider: elasticbeanstalk
-  region: us-east-2
-  app: demo
-  env: demo-env
-  bucket_name: elasticbeanstalk-us-east-2-919796150918
-  bucket_path: docker-multi
-  on:
-    branch: develop
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_KEY
+#deploy:
+#  provider: elasticbeanstalk
+#  region: us-east-2
+#  app: demo
+#  env: demo-env
+#  bucket_name: elasticbeanstalk-us-east-2-919796150918
+#  bucket_path: docker-multi
+#  on:
+#    branch: develop
+#  access_key_id: $AWS_ACCESS_KEY
+#  secret_access_key:
+#    secure: $AWS_SECRET_KEY
